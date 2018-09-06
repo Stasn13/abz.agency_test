@@ -1,0 +1,351 @@
+@import 'mixins';
+
+$lime: #87b448;
+$pale-grey: #f3f4f6;
+$gray: #e0e2e6;
+$black: #1c2534;
+$gray-footer: #b7bfcd;
+$dark-green: #71973c;
+$pinkish-grey: #c1c1c1;
+$black-form: #010101;
+$silver: #c8cdd5;
+$light-gray: #f7f7f7;
+$middle-gray: #7c8695;
+$silver-two:#c2c2c4;
+
+*{
+  box-sizing: border-box;
+}
+h1,h2,h3,h4,h5,h6,p{
+  margin: 0;
+}
+input[type="submit"], button{
+  cursor: pointer;
+}
+body{
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  font-family: "ProximaNova";
+}
+a{
+    text-decoration: none
+}
+.button-green{
+  display: block;
+  background-color: $lime;
+  text-align: center;
+  color: #ffffff;
+  font-size: 14px;
+  cursor: pointer;
+  &:hover{
+    opacity: 0.7;
+  }
+}
+//Contact us
+
+header{  
+    background-image: url(../img/Slider.jpg);
+    height: 510px;
+    background-size: cover;
+    h2{
+        color: $pale-grey;
+        padding-top: 192px;
+        font-size: 48px;
+        text-align: center;
+        font-weight: 300;
+        line-height: 0.63
+    }
+    p{
+        margin-top: 17px;
+        color: $pale-grey;
+        text-align: center;
+        font-size: 20px;
+        font-weight: 300;
+        line-height: 1.5
+    }
+}
+.logo-button{
+    position: fixed;
+    top: 40px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    img{
+        margin-left: 40px;
+    }
+    .login-button{
+        margin: 5px 40px 0 0;
+        height: 30px;
+        @include border-radius(5px);
+        padding: 0 20px;
+        line-height: 30px
+    }
+}
+.form-feedback{
+    background-image: url(../img/BG.png);
+    border-bottom: 1px solid $gray ;
+    padding-bottom: 35px;
+    .error{
+        color: red
+    }
+    &-container{
+        margin: 0 auto;
+        padding: 20px 20px 0px;
+        width: 760px;
+        background-color: white;
+        @include border-radius(5px);
+        position: relative;
+        top: -100px;
+        border: 1px solid $gray;
+        .select2{
+            margin-bottom: 20px;
+            .select2-selection--single{
+                border: 1px solid $silver;
+                padding: 17px 0 11px 18px;
+                @include border-radius(5px);
+                font-size: 16px;
+                height: 52px;
+                
+                .select2-selection__rendered{
+                    padding: 0px;
+                    color: $black-form;
+                    line-height: 1;
+                }
+                .select2-selection__arrow{
+                    width: 50px;
+                    height: 100%;
+                    b{
+                        border: none;
+                        background-image: url('../img/Arrow.png');
+                        display: inline-block;
+                        width: 8px;
+                        height: 5px
+                    }
+                }
+            }
+        }
+        .select2-container--default.select2-container--open {
+            .select2-selection--single {
+              .select2-selection__arrow{
+                b{
+                  transform: rotate(180deg)
+                }
+            }
+
+          }
+        }
+        p{
+            color: $pinkish-grey;
+            margin-bottom: 17px;
+        }
+        label{
+            display: block;
+            margin-bottom: 7px;
+            color: $black;
+        }
+        input,textarea,select,option{
+            width: 100%;
+            height: 52px;
+            margin-bottom: 20px;
+            padding: 21px 0px 20px 20px;
+            font-size: 16px;
+            color: $black-form;
+            @include border-radius(5px);
+            border: 1px solid $silver;
+            background-color: #fff;
+        }
+        .name-email{
+            display: flex;
+            justify-content: space-between;
+            .name{
+                width: 100%;
+                padding-right: 15px;
+            }
+            .email{
+                width: 100%;
+                padding-left: 15px
+            }
+        }
+        .description{
+            label{
+                display:inline;
+            }
+            span{
+                float: right;
+                margin-bottom: 7px;
+                color: $black;
+            }
+            textarea{
+                height: 152px;
+                padding: 12px 21px;
+            }
+        }
+        .add-photo{
+            margin-bottom: 20px;
+            display: flex;
+            label{
+                width: 130px;
+                height: 130px;
+                background-color: $light-gray;
+                @include border-radius(4px);
+                margin: 0px 20px 0px 0px;
+                border: 1px solid $silver;
+                cursor: pointer;
+                &:hover{
+                    background-color: white
+                }
+                input{
+                opacity: 0;
+                margin: 0;
+                padding: 0;
+                height: 0;
+                }
+                p{
+                    color: $middle-gray;
+                    text-align: center;
+                    margin: 0;
+                    color: $middle-gray;
+                    margin: 9px 0 3px;
+                }
+                span{
+                    display: block;
+                    text-align: center;
+                    font-size: 12px;
+                    color: $silver-two; 
+                }
+                #photo-error{
+                    color: red;
+                    text-align: center;
+                    font-size: 14px;
+                }
+            }
+            .img-preview{
+                width: 130px;
+                height: 130px;
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+        .submit{
+            position: absolute;
+            bottom: -73px;
+            width: 100%;
+            left: 0;
+            @include border-radius(5px);
+            border: none;
+            INPUT[type="submit"]{
+                color: white;
+                background-color: $lime;
+                font-family: "ProximaNova";
+                font-weight: 300;
+                font-size: 16px;
+                padding: 0;
+                margin: 0;
+            }
+        }
+    }
+
+}
+.about{
+    border-bottom: 1px solid $gray;
+    h2{
+        padding-top: 98px;
+        padding-bottom: 50px;
+        font-size: 30px;
+        color: $black;
+        text-align: center;
+        font-weight: 300;
+    }
+    .about-blocks{
+        display: flex;
+        color: #7c8695;
+        font-size: 16px;
+        font-weight: 300;
+        padding-bottom: 50px;
+        .left{
+            padding-left: 79px;
+            padding-right: 104px;
+            line-height: 24px
+        }
+        .right{
+            padding-right: 84px;
+            line-height: 24px
+        }
+    }
+}
+.copyright{
+    display: flex;
+    justify-content: space-between;
+    padding: 34px 84px 47px 80px;
+    font-size: 12px;
+    color: $gray-footer;
+    a{
+        font-size: 12px;
+        color: $gray-footer;
+        &:hover{
+            color: $dark-green
+        }
+        &:first-child{
+            padding-right: 28px
+        }
+        &:nth-child(2){
+            padding-right: 20px
+        }
+    }
+}
+//модальное окно
+.modal{
+  z-index: 1;
+  background-color: rgba($color: #fff, $alpha: 0.4);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  &-window{
+    width: 600px;
+    max-width: 100%;
+    height: 320px;
+    max-height: 100%;
+    &-header{
+      background-color: $lime;
+      height: 25%;
+      border: 1px solid $dark-green;
+      border-bottom: none;
+      font-size: 26px;
+      display: flex;
+      justify-content: center;
+      align-items: center;   
+    }
+    &-content{
+      background-color: #fff;
+      height: 75%;
+      color: $black;
+      border: 1px solid $gray;
+      border-top: none;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+        p{
+          font-size:26px;
+          padding: 0px 30px;
+          text-align: center;
+        }
+        span{
+          font-size: 16px;
+        }
+    }
+    &-button{
+    padding: 0 20px;
+    height: 30px;
+    line-height: 30px;
+    }
+  }
+}

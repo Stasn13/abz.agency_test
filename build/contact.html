@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Contact us</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+    <link rel="stylesheet" href="styles/contact.min.css">
+</head>
+<body>
+    <header class="slider">
+        <h2>Home of Dentistry</h2>
+        <p>Denteez was created by dentists for dentistry in order to<br> make the life of everyone involved in dentistry easier.</p>
+    </header>
+    <div class="logo-button">
+        <img src="img/logo-img.svg" alt="Denteez">
+        <div class="login-button button-green">Log in Now</div>
+    </div>
+    <div class="form-feedback">
+       <div class="form-feedback-container">
+            <form class="feedback" method="post" novalidate="novalidate">
+                <p>Fields marked “*” are required</p>
+                <div class="enquiry-type">
+                    <label for="enquiry-type">Enquiry Type *</label>
+                    <select class="js-data-example-ajax enquiry-type-select" name="enquiry-type" id="enquiry-type">
+                    </select>
+                </div>
+                <div class="other" hidden="true" id="other-hidden">
+                    <input type="text" placeholder="Other" name="other" id="enquiry-type-other">
+                </div>
+                <div class="name-email">
+                    <div class="name">
+                        <label for="name">Name *</label>
+                        <input type="text" class="required-name" placeholder="Dentist" name="name" id="name">
+                        <span class="error-name error" hidden>Please enter your name</span>
+                    </div>
+                    <div class="email">
+                        <label for="email">Email *</label>
+                        <input type="text" class="required-email" placeholder="rachelm@gmail.com" name="email" id="email">
+                        <span class="error-email error" hidden>Please enter a valid email</span>
+                    </div>
+                </div>
+                <div class="subject">
+                    <label for="subject">Subject *</label>
+                    <input type="text" class="required-subject" name="subject" id="subject">
+                    <span class="error-subject error" hidden>Subject cannot be blank</span>
+                </div>
+                <div class="description">
+                    <label for="description">Description *</label>
+                    <span id="count">(0/1000)</span>
+                    <textarea class="required-description" name="description" maxlength="1000" id="description"></textarea>
+                    <p class="error-description error" hidden>Description cannot be blank</p>
+                </div>
+                <div class="add-photo">
+                    <label for="file">
+                        <input type="file" id="add-photo">
+                        <p>Add photo</p>
+                        <span>Minimum size of<br>300x300 jpeg ipg<br>png 5 MB</span>
+                        <div id="photo-error" hidden>wrong type blalbla</div>
+                    </label>
+                    <div class="img-preview" hidden>
+                        <img src="" id="img-preview" alt="image preview">
+                    </div>
+                </div>
+                <div class="submit">
+                    <input type="submit" value="Submit" id="submit-form">
+                </div>
+            </form>
+       </div>
+    </div>
+    <section class="about">
+        <h2>About Denteez</h2>
+        <div class="about-blocks">
+            <p class="left">
+                Why is it always so difficult to find what you are looking for in dentistry? Whether it is the latest advancement in technology
+                or techniques or simply a review or understanding of the vast amount of products? Perhaps finding someone to just fix your
+                broken equipment or simply hiring new staff or looking for that new job?
+            </p>
+            <p class="right">
+                Our mission is to give every dental professional the possibility to discuss and share all aspects of their profession, their
+                practice and their business. We aim to make the world of dentistry easy and accessible, so every dental professional can
+                find what they are looking for quickly and easily all in one place.
+            </p>
+        </div>       
+    </section>
+    <footer class="copyright">
+        <p>Denteez Copyright 2015</p>
+        <div class="copyright-menu">
+            <a href="#">Support</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of use</a>
+        </div>
+    </footer>
+    <div class="modal">
+        <div class="modal-window">
+            <div class="modal-window-header">
+                <h3 class="message">Succes</h3>
+            </div>
+            <div class="modal-window-content">
+                <p class="description">Letter sended</p>
+                <span class="code"></span>
+            </div>
+            <div class="modal-window-button">
+                <div class="button-green">
+                    Close
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--<script type="text/html" src="../bower_components/select2/dist/js/select2.min.js"></script>-->
+    <script src="js/contact-script-min.js"></script>
+</body>
+</html>
